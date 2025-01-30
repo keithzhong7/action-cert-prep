@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  # Test dependencies
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Run tests
+        run: |
+          echo "Run tests"
